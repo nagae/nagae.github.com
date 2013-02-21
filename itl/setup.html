@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<title>Setup</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="Setup"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-02-21 Thu"/>
+<meta name="author" content="Takeshi Nagae"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel=stylesheet href="http://nagae.github.com/style.css" type="text/css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+<div id="org-div-home-and-up" style="text-align:right;font-size:70%;white-space:nowrap;">
+ <a accesskey="h" href="./index.html"> UP </a>
+ |
+ <a accesskey="H" href="../index.html"> HOME </a>
+</div>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Setup</h1>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left"><a href="index.html">top</a></td><td class="left"><a href="setup.html">setup</a></td><td class="left"><a href="emacs.html">Emacs</a></td><td class="left"></td></tr>
+</tbody>
+</table>
+
+
+
+
+<div id="table-of-contents">
+<h2>&#30446;&#27425;</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 事前にしておくこと</a>
+<ul>
+<li><a href="#sec-1-1">1.1 多少は堅牢なパスワードの作り方を知ろう</a></li>
+<li><a href="#sec-1-2">1.2 Dropbox, Bitbucket, Github, Evernote, Cloud.app にアカウントを作成する</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 初期設定</a>
+<ul>
+<li><a href="#sec-2-1">2.1 キーボード関連</a></li>
+<li><a href="#sec-2-2">2.2 ターミナルからの作業に慣れる</a></li>
+<li><a href="#sec-2-3">2.3 BetterTouchToolをインストールしてみよう</a></li>
+<li><a href="#sec-2-4">2.4 vi エディタの最低限の使い方を覚えよう</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 事前にしておくこと</h2>
+<div class="outline-text-2" id="text-1">
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 多少は堅牢なパスワードの作り方を知ろう</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+</div>
+
+<div id="outline-container-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> 全てのサイトで同じパスワードを使うと，どれか1つでも盗まれたらアウト．</h4>
+<div class="outline-text-4" id="text-1-1-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2"><span class="section-number-4">1.1.2</span> 基本パスコード + サービス別コードという形で作るのがオススメ．</h4>
+<div class="outline-text-4" id="text-1-1-2">
+
+<p>例えば，基本パスコードを <code>P@ssw()rd</code> とかとしよう( <b>使っちゃダメよ</b> )．
+そして，利用するサービスごとの個別コードを，例えば，
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">サイト名</th><th scope="col" class="left">個別コード</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">Google</td><td class="left"><code>Ggle</code></td></tr>
+<tr><td class="left">Dropbox</td><td class="left"><code>Dbox</code></td></tr>
+<tr><td class="left">東北大学メールサーバー</td><td class="left"><code>Thml</code></td></tr>
+</tbody>
+</table>
+
+などとしておく．そして，各サービスで実際に使うパスワードを
+<blockquote>
+
+<p>基本パスコード + 適当な記号 + 個別コード
+</p>
+</blockquote>
+
+
+<p>
+とするのだ．例えば，適当な記号として <code>%</code> を使うことにしよう．
+このとき，Google には <code>P@ssw()rd%Ggle</code>, Dropbox には <code>P@ssw()rd%Dbox</code>, 東北大学メールサーバーには <code>P@ssw()rd%Thml</code> というパスワードを使うのだ．
+</p></div>
+
+</div>
+
+<div id="outline-container-1-1-3" class="outline-4">
+<h4 id="sec-1-1-3"><span class="section-number-4">1.1.3</span> 利点</h4>
+<div class="outline-text-4" id="text-1-1-3">
+
+<ul>
+<li>サービスごとに全く違うパスワードを作る・覚える必要がない．
+</li>
+<li>どれか1つのサイトでパスワードが盗まれても，直ちに別のサービスまで危険になるわけではない．
+</li>
+<li>基本パスコード，記号およびその組み合わせ方さえ秘密にしておけば，個別コードがリークしても直ちに危険にはならない．
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-1-4" class="outline-4">
+<h4 id="sec-1-1-4"><span class="section-number-4">1.1.4</span> 注意点</h4>
+<div class="outline-text-4" id="text-1-1-4">
+
+<ul>
+<li>基本パスコードは6文字以上で，英語大文字・小文字・数字が少くとも1つは入っていることが望ましい．
+</li>
+<li>サイト別パスコードをあまり長くしない．
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-1-5" class="outline-4">
+<h4 id="sec-1-1-5"><span class="section-number-4">1.1.5</span> アレンジを効かせよう</h4>
+<div class="outline-text-4" id="text-1-1-5">
+
+<p>例えば，
+</p><ul>
+<li>個別コードを先に書くことにする(eg. <code>Ggle%P@ssw()rd</code>, <code>Dbox%P@ssw()rd</code>)
+</li>
+<li>個別コードで基本コードを挟む(eg. <code>Gg%P@ssw()rd%le</code>, <code>Db%P@ssw()rd%ox</code>)
+</li>
+<li>記号を変えたり，増やしてみる(eg. <code>P@ssw()rd@Ggle!</code>, <code>P@ssw()rd@Dbox!</code>)
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-1-6" class="outline-4">
+<h4 id="sec-1-1-6"><span class="section-number-4">1.1.6</span> パスコード生成プログラム</h4>
+<div class="outline-text-4" id="text-1-1-6">
+
+
+
+
+<pre class="src src-screen">$ brew install pwgen <span style="color: #ff4500;"># </span><span style="color: #ff4500;">home brew &#12391;&#12452;&#12531;&#12473;&#12488;&#12540;&#12523;</span>
+$ pwgen --help <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#12504;&#12523;&#12503;&#12434;&#35211;&#12427;</span>
+$ pwgen -B -v 8 <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#23569;&#12394;&#12367;&#12392;&#12418;1&#12388;&#12364;&#35352;&#21495;&#12391;&#65292;&#35211;&#38291;&#36949;&#12356;&#26131;&#12356;&#25991;&#23383;&#12434;&#20351;&#12431;&#12394;&#12356;8&#25991;&#23383;&#12398;&#12497;&#12473;&#12467;&#12540;&#12489;&#12434;&#29983;&#25104;</span>
+</pre>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Dropbox, Bitbucket, Github, Evernote, Cloud.app にアカウントを作成する</h3>
+<div class="outline-text-3" id="text-1-2">
+
+<p>それぞれ，下記のサイトへ行き，アカウントを作成．上記のパスワードの作り方を参考に
+</p><dl>
+<dt>Dropbox</dt><dd><a href="http://db.tt/v4w2mpY">http://db.tt/v4w2mpY</a> 
+</dd>
+<dt>Bitbucket</dt><dd><a href="https://bitbucket.org">https://bitbucket.org</a>
+</dd>
+<dt>Github</dt><dd><a href="https://github.com">https://github.com</a>
+</dd>
+<dt>Evernote</dt><dd><a href="http://evernote.com/intl/jp/">http://evernote.com/intl/jp/</a>
+</dd>
+<dt>Cloud.app</dt><dd><a href="http://getcloudapp.com">http://getcloudapp.com</a>
+</dd>
+</dl>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 初期設定</h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> キーボード関連</h3>
+<div class="outline-text-3" id="text-2-1">
+
+
+</div>
+
+<div id="outline-container-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1"><span class="section-number-4">2.1.1</span> OSを最新に</h4>
+<div class="outline-text-4" id="text-2-1-1">
+
+<ul>
+<li>ソフトウェア・アップデートを実行
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-1-2" class="outline-4">
+<h4 id="sec-2-1-2"><span class="section-number-4">2.1.2</span> ctrl と caps を入れ替える</h4>
+<div class="outline-text-4" id="text-2-1-2">
+
+<ul>
+<li>システム環境設定→キーボード→修飾キー
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-1-3" class="outline-4">
+<h4 id="sec-2-1-3"><span class="section-number-4">2.1.3</span> Spotlight のショートカットを ctrl+shift+space に</h4>
+<div class="outline-text-4" id="text-2-1-3">
+
+<ul>
+<li>システム環境設定→Spotlight
+</li>
+</ul>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> ターミナルからの作業に慣れる</h3>
+<div class="outline-text-3" id="text-2-2">
+
+
+</div>
+
+<div id="outline-container-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> ターミナルを立ち上げる</h4>
+<div class="outline-text-4" id="text-2-2-1">
+
+<ul>
+<li>Spotlight を起動(ctrl+shift+space)して，ウィンドウにターミナルもしくは <code>terminal</code> を入力する．
+</li>
+<li>ターミナルウィンドウが開く
+</li>
+</ul>
+
+
+
+
+<pre class="src src-screen">Foo:~ [username]$
+</pre>
+
+<p>
+のように表示される．最初の <code>Foo</code> は端末(Mac)の名前を，<code>~</code> はホームフォルダを，<code>[username]</code> はユーザー名を表している．
+以下，<code>$</code> の前は適宜省略する．
+</p></div>
+
+</div>
+
+<div id="outline-container-2-2-2" class="outline-4">
+<h4 id="sec-2-2-2"><span class="section-number-4">2.2.2</span> いくつかコマンドを試してみよう</h4>
+<div class="outline-text-4" id="text-2-2-2">
+
+
+
+
+<pre class="src src-screen">$ pwd                                        <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#29694;&#22312;&#12398;&#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#12434;&#34920;&#31034;</span>
+/Users/[username]
+$ ls                                         <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#20869;&#12398;&#12501;&#12449;&#12452;&#12523;&#19968;&#35239;&#12434;&#34920;&#31034;</span>
+Applications                    Movies
+Desktop                         Music
+Documents                       Pictures
+:
+$ cd Applications                            <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#12434;&#31227;&#21205;(cd &#12392; Applications &#12398;&#38291;&#12399;&#21322;&#35282;&#12473;&#12506;&#12540;&#12473;)</span>
+$ pwd
+/Users/[username]/Library                    <span style="color: #ff4500;"># </span><span style="color: #ff4500;">Library &#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#12395;&#31227;&#21205;&#12375;&#12383;&#12371;&#12392;&#12434;&#30906;&#35469;</span>
+$ ls                                         <span style="color: #ff4500;"># </span><span style="color: #ff4500;">Library &#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#20869;&#12398;&#12501;&#12449;&#12452;&#12523;&#19968;&#35239;&#12434;&#34920;&#31034;</span>
+Accounts                        LaunchAgents
+Address Book Plug-Ins           Logs
+Application Support             Mail
+Assistant                       Messages
+:
+$ cd Safari                                  <span style="color: #ff4500;"># </span><span style="color: #ff4500;">Safari &#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#12395;&#31227;&#21205;</span>
+$ pwd                                        <span style="color: #ff4500;"># </span><span style="color: #ff4500;">Safari &#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#12395;&#31227;&#21205;&#12375;&#12383;&#12371;&#12392;&#12434;&#30906;&#35469;</span>
+/Users/[username]/Library/Safari
+$ ls ..                                      <span style="color: #ff4500;"># </span><span style="color: #ff4500;">Safari &#12398;1&#12388;&#19978;&#12398;&#12487;&#12451;&#12524;&#12463;&#12488;&#12522;(Library)&#20869;&#12398;&#12501;&#12449;&#12452;&#12523;&#19968;&#35239;&#12434;&#34920;&#31034;</span>
+Accounts                        LaunchAgents
+Address Book Plug-Ins           Logs
+Application Support             Mail
+:
+$ ls ../iTunes                               <span style="color: #ff4500;"># </span><span style="color: #ff4500;">Safari&#12363;&#12425;1&#12388;&#12398;&#19978;&#12398;&#12487;&#12451;&#12524;&#12463;&#12488;&#12522;(Library)&#12398;&#19979;&#12398;iTunes&#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#20869;&#12398;&#12501;&#12449;&#12452;&#12523;&#19968;&#35239;&#12434;&#34920;&#31034;</span>
+StorageTracker.db
+http_itunes.apple.com_0.localstorage
+https_buy.itunes.apple.com_0.localstorage
+https_se.itunes.apple.com_0.localstorage
+iTunes Plug-ins
+$ ls /Users/[username]                       <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#12507;&#12540;&#12512;&#12501;&#12457;&#12523;&#12480;&#20869;&#12398;&#12501;&#12449;&#12452;&#12523;&#12434;&#34920;&#31034;&#65294;</span>
+Accounts                        LaunchAgents
+Address Book Plug-Ins           Logs
+Application Support             Mail
+:
+$ ls ~                                       <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#12507;&#12540;&#12512;&#12501;&#12457;&#12523;&#12480;&#12399; ~ &#12391;&#12418;&#25351;&#23450;&#12391;&#12365;&#12427;&#65294;</span>
+Accounts                        LaunchAgents
+Address Book Plug-Ins           Logs
+Application Support             Mail
+:
+$ cd ..                                      <span style="color: #ff4500;"># </span><span style="color: #ff4500;">Safari &#12398;1&#12388;&#19978;&#12398;&#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#12395;&#31227;&#21205;</span>
+$ pwd
+/Users/[username]/Library                    <span style="color: #ff4500;"># </span><span style="color: #ff4500;">Library &#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#12395;&#31227;&#21205;&#12375;&#12383;&#12371;&#12392;&#12434;&#30906;&#35469;</span>
+$ cd ~                                       <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#12371;&#12398;&#12467;&#12510;&#12531;&#12489;&#12391;&#12356;&#12388;&#12391;&#12418;&#12507;&#12540;&#12512;&#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#12480;&#12395;&#25147;&#12387;&#12390;&#12371;&#12428;&#12427;</span>
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2-3" class="outline-4">
+<h4 id="sec-2-2-3"><span class="section-number-4">2.2.3</span> 最低限知っておくべきコマンド</h4>
+<div class="outline-text-4" id="text-2-2-3">
+
+<table  border="2" cellspacing="0" cellpadding="6" rules="all" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">コマンド</th><th scope="col" class="left">機能</th></tr>
+</thead>
+<tbody>
+<tr><td class="left"><code>ls</code></td><td class="left">現在のディレクトリの中身を一覧する</td></tr>
+<tr><td class="left"><code>ls -a</code></td><td class="left">現在のディレクトリで，隠れファイル(<code>.</code> で始まるファイル)も含めて出力する</td></tr>
+<tr><td class="left"><code>ls -la</code></td><td class="left">隠れファイルも含めて，もっと多くの情報を出力する</td></tr>
+<tr><td class="left"><code>man foo</code></td><td class="left"><code>foo</code> というコマンドのマニュアルを見る</td></tr>
+<tr><td class="left"><code>less foo</code></td><td class="left"><code>foo</code> というファイルの中身を表示する</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left"><code>pwd</code></td><td class="left">現在のディレクトリを表示</td></tr>
+<tr><td class="left"><code>cd foo</code></td><td class="left"><code>foo</code> というディレクトリを移動</td></tr>
+<tr><td class="left"><code>cd ..</code></td><td class="left">1つ上のディレクトリへ移動</td></tr>
+<tr><td class="left"><code>cd ~</code></td><td class="left">ホームフォルダへ移動</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left"><code>mkdir foo</code></td><td class="left"><code>foo</code> というディレクトリを作る</td></tr>
+<tr><td class="left"><code>cp foo bar</code></td><td class="left"><code>foo</code> というファイルを <code>bar</code> という名前でコピーする</td></tr>
+<tr><td class="left"><code>rm -i foo</code></td><td class="left"><code>foo</code> というファイルを削除(本当に消去してよいか確認が出る)</td></tr>
+<tr><td class="left"><code>rm -r foo</code></td><td class="left"><code>foo</code> というディレクトリの中身を <span style="text-decoration:underline;">全て</span> 消去する</td></tr>
+<tr><td class="left"><code>rm -f foo</code></td><td class="left"><code>foo</code> というファイルを <span style="text-decoration:underline;">強制的に</span> 削除する</td></tr>
+<tr><td class="left"><code>rm -rf foo</code></td><td class="left"><code>foo</code> というディレクトリの中身を <span style="text-decoration:underline;">強制的に</span> <span style="text-decoration:underline;">全て</span> 消去する</td></tr>
+</tbody>
+<tbody>
+<tr><td class="left"><code>exit</code></td><td class="left">ターミナルを閉じる</td></tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> BetterTouchToolをインストールしてみよう</h3>
+<div class="outline-text-3" id="text-2-3">
+
+<p>BetteTouchToolは MagicTrackpad の様々なジェスチャに機能を割当てるツール．とても便利．これをインストールしてみよう．
+</p>
+</div>
+
+<div id="outline-container-2-3-1" class="outline-4">
+<h4 id="sec-2-3-1"><span class="section-number-4">2.3.1</span> 通常の方法</h4>
+<div class="outline-text-4" id="text-2-3-1">
+
+<ul>
+<li><a href="http://blog.boastr.net/">http://blog.boastr.net/</a> から「Download BetterTouchTool」を選ぶ．
+</li>
+<li>DLされた <code>BetterTouchTool.zip</code> をダブルクリックすると <code>BetterTouchTool.app</code> が作成される．
+</li>
+<li><code>BetterTouchTool.app</code> をアプリケーション・フォルダに移動する．
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-3-2" class="outline-4">
+<h4 id="sec-2-3-2"><span class="section-number-4">2.3.2</span> ターミナルを使う方法</h4>
+<div class="outline-text-4" id="text-2-3-2">
+
+
+
+
+<pre class="src src-screen">$ cd ~/Downloads/                                   <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#12480;&#12454;&#12531;&#12525;&#12540;&#12489;&#12539;&#12501;&#12457;&#12523;&#12480;&#12408;&#31227;&#21205;</span>
+$ curl -O http://www.boastr.de/BetterTouchTool.zip  <span style="color: #ff4500;"># </span><span style="color: #ff4500;">BetterTouchTool.zip &#12501;&#12449;&#12452;&#12523;&#12434;&#20445;&#23384;</span>
+$ unzip BetterTouchTool.zip                         <span style="color: #ff4500;"># </span><span style="color: #ff4500;">zip &#12501;&#12449;&#12452;&#12523;&#12434;&#35299;&#20941;</span>
+$ mv BetterTouchTool.app/ /Applications/            <span style="color: #ff4500;"># </span><span style="color: #ff4500;">/Applications/ &#12501;&#12457;&#12523;&#12480;&#12408;&#31227;&#21205;</span>
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-3-3" class="outline-4">
+<h4 id="sec-2-3-3"><span class="section-number-4">2.3.3</span> 注意事項</h4>
+<div class="outline-text-4" id="text-2-3-3">
+
+<p>ー <code>curl</code> というのは Web ページにアクセスするためのコマンド．<code>-O</code> オプションはファイルを保存する時に使う．
+</p><ul>
+<li><code>.zip</code> という拡張子は zip 形式で <b>圧縮</b> されたファイルであることを示している．
+</li>
+<li>Mac のソフトウェアは「アプリケーション」というフォルダに格納されている．このフォルダは，コマンドライン上では <code>/Applications/</code> に対応している．フォルダ名の前に <code>/</code> がついていることに注意しよう．
+</li>
+<li>Mac のソフトウェアは，一見 <code>.app</code> と名前のついたファイルのように見えるが，実はフォルダになっている．例えば，<code>BetterTouchTools</code> の中は以下のようなフォルダ構成になっている．
+</li>
+</ul>
+
+
+
+
+<pre class="src src-screen">$ tree -L 2 BetterTouchTool.app/
+BetterTouchTool.app/
+&#9492;&#9472;&#9472; Contents
+    &#9500;&#9472;&#9472; Frameworks
+    &#9500;&#9472;&#9472; Info.plist
+    &#9500;&#9472;&#9472; MacOS
+    &#9500;&#9472;&#9472; PkgInfo
+    &#9500;&#9472;&#9472; Resources
+    &#9492;&#9472;&#9472; _CodeSignature
+</pre>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> vi エディタの最低限の使い方を覚えよう</h3>
+<div class="outline-text-3" id="text-2-4">
+
+<p>vi エディタは，ターミナル上で使える軽量かつ高機能なテキストエディタ．操作に癖があるが，ちょっとしたスクリプトや設定ファイルくらいであれば，後述する Emacs を立ち上げるよりも，これで書いた方が早い．
+</p><dl>
+<dt>やりたいこと</dt><dd><code>rm</code> コマンドはファイルを問答無用で削除してしまうので，「削除するたびに確認するオプション」 <code>-i</code> を常につけるようにしたい．
+</dd>
+<dt>どうやるのか</dt><dd>ホームフォルダに <code>.bash_profile</code> を作り，そこに「 <code>rm</code> というコマンドは <code>rm -i</code> と読み替えなさい」という指示を書く．
+</dd>
+</dl>
+
+
+</div>
+
+<div id="outline-container-2-4-1" class="outline-4">
+<h4 id="sec-2-4-1"><span class="section-number-4">2.4.1</span> vi を起動する</h4>
+<div class="outline-text-4" id="text-2-4-1">
+
+<p><code>vi foo</code> で <code>foo</code> というファイルを開く．ファイルが無ければ作る準備をしてくれる．
+</p>
+
+
+<pre class="src src-screen">$ vi ~/.bash_profile
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-4-2" class="outline-4">
+<h4 id="sec-2-4-2"><span class="section-number-4">2.4.2</span> 読み替えの指示を書き込む</h4>
+<div class="outline-text-4" id="text-2-4-2">
+
+<ul>
+<li>vi は起動時は閲覧モードになっているので，そのままでは編集できない．そこで，まずは <code>i</code> とタイプして挿入モードに切り替える．
+</li>
+<li>挿入モードになると右下に <code>-- INSERT --</code> と表示される．そこで，以下を入力する．間違えたら backspace で戻ること．
+</li>
+</ul>
+
+
+
+
+<pre class="src src-sh"><span style="color: #b0c4de;">alias</span> <span style="color: #eedd82;">rm</span>=<span style="color: #ffa07a;">'rm -i'</span>
+</pre>
+
+<ul>
+<li>入力を終えたら保存する．まず Esc を押し，続いて「:w」とタイプして return する．これで保存される．
+</li>
+<li>viを終了するには，Esc を押し，続いて「:q」とタイプする．
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2-4-3" class="outline-4">
+<h4 id="sec-2-4-3"><span class="section-number-4">2.4.3</span> 読み替えの指示を反映させる</h4>
+<div class="outline-text-4" id="text-2-4-3">
+
+
+
+
+<pre class="src src-screen">$ vi ~/.bash_profile
+</pre>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">&#26085;&#20184;: 2013-02-21 Thu</p>
+<p class="author">&#33879;&#32773;: Takeshi Nagae</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3e with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
