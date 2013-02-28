@@ -62,6 +62,30 @@
 </style>
 <link rel=stylesheet href="http://nagae.github.com/style.css" type="text/css">
 <script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
 <!--/*--><![CDATA[/*><!--*/
  function CodeHighlightOn(elem, id)
  {
@@ -100,7 +124,6 @@
 <h1 class="title">Information Technology Literacy </h1>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-<caption></caption>
 <colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" />
 </colgroup>
 <tbody>
@@ -112,78 +135,495 @@
 
 
 <div id="table-of-contents">
-<h2>Table of Contents</h2>
+<h2>&#30446;&#27425;</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1 メニュー</a></li>
-<li><a href="#sec-2">2 test heading 2</a></li>
+<li><a href="#sec-1">1 パスワードの作り方</a>
+<ul>
+<li><a href="#sec-1-1">1.1 パスワードの作り方</a></li>
+<li><a href="#sec-1-2">1.2 iCloud への登録</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 Mac のセットアップ</a>
+<ul>
+<li><a href="#sec-2-1">2.1 ソフトウェア・アップデート</a></li>
+<li><a href="#sec-2-2">2.2 spotlight のキーバインド</a></li>
+<li><a href="#sec-2-3">2.3 ソフトウェアのインストール方法</a></li>
+<li><a href="#sec-2-4">2.4 BetterTouchTools のインストールと設定</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 各種サービスのアカウント作成とユーティリティのインストール</a>
+<ul>
+<li><a href="#sec-3-1">3.1 Dropbox</a></li>
+<li><a href="#sec-3-2">3.2 Github</a></li>
+<li><a href="#sec-3-3">3.3 Bitbucket</a></li>
+<li><a href="#sec-3-4">3.4 Sugarsync</a></li>
+<li><a href="#sec-3-5">3.5 Cloud.app</a></li>
+<li><a href="#sec-3-6">3.6 Evernote (必須ではない)</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 ターミナルの操作に慣れよう</a>
+<ul>
+<li><a href="#sec-4-1">4.1 基本コマンド</a></li>
+<li><a href="#sec-4-2">4.2 vi の使い方</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 Homebrew によるパッケージ管理</a></li>
+<li><a href="#sec-6">6 Emacs &mdash; 最強のエディタ</a>
+<ul>
+<li><a href="#sec-6-1">6.1 基本コマンド</a></li>
+<li><a href="#sec-6-2">6.2 dired &mdash; ファイル管理</a></li>
+<li><a href="#sec-6-3">6.3 el-get &mdash; Lisp 管理</a></li>
+<li><a href="#sec-6-4">6.4 バッファ &amp; ウィンドウ ~ フレームによる作業</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7 LaTeX</a>
+<ul>
+<li><a href="#sec-7-1">7.1 TeXLive 2012 のインストール</a></li>
+<li><a href="#sec-7-2">7.2 コンパイルしてみる</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 org-mde</a>
+<ul>
+<li><a href="#sec-8-1">8.1 メモを書く</a></li>
+<li><a href="#sec-8-2">8.2 ワーキングペーパーを書く</a></li>
+<li><a href="#sec-8-3">8.3 プレゼン資料を作る</a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9 Git / magit / sourcetree</a>
+<ul>
+<li><a href="#sec-9-1">9.1 ローカルでの作業管理</a></li>
+<li><a href="#sec-9-2">9.2 リモートリポジトリの使い方</a></li>
+</ul>
+</li>
+<li><a href="#sec-10">10 SKK / AquaSKK &mdash; シンプル漢字かな入力</a>
+<ul>
+<li><a href="#sec-10-1">10.1 AquaSKK</a></li>
+</ul>
+</li>
+<li><a href="#sec-11">11 Octave/gnuplot</a></li>
+<li><a href="#sec-12">12 C++ によるプログラミング</a></li>
 </ul>
 </div>
 </div>
 
 <div id="outline-container-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> メニュー</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> パスワードの作り方</h2>
 <div class="outline-text-2" id="text-1">
 
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-<caption></caption>
-<colgroup><col class="left" />
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> パスワードの作り方</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+</div>
+
+<div id="outline-container-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> 全てのサイトで同じパスワードを使うと，どれか1つでも盗まれたらアウト．</h4>
+<div class="outline-text-4" id="text-1-1-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-1-1-2" class="outline-4">
+<h4 id="sec-1-1-2"><span class="section-number-4">1.1.2</span> 基本パスコード + サービス別コードという形で作るのがオススメ．</h4>
+<div class="outline-text-4" id="text-1-1-2">
+
+<p>例えば，基本パスコードを <code>P@ssw()rd</code> とかとしよう( <span class="alert">使っちゃダメよ</span> )．
+そして，利用するサービスごとの個別コードを，例えば，
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
 </colgroup>
+<thead>
+<tr><th scope="col" class="left">サイト名</th><th scope="col" class="left">個別コード</th></tr>
+</thead>
 <tbody>
-<tr><td class="left"><a href="setup.html">セットアップ</a></td></tr>
-<tr><td class="left"><a href="emacs.html">Emacs</a></td></tr>
+<tr><td class="left">Google</td><td class="left"><code>Ggle</code></td></tr>
+<tr><td class="left">Dropbox</td><td class="left"><code>Dbox</code></td></tr>
+<tr><td class="left">東北大学メールサーバー</td><td class="left"><code>Thml</code></td></tr>
 </tbody>
 </table>
 
+などとしておく．そして，各サービスで実際に使うパスワードを
+<blockquote>
+
+<p>基本パスコード + 適当な記号 + 個別コード
+</p>
+</blockquote>
 
 
 <p>
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-<img src="ltxpng/index_ff81faae5073fcd5589f7fb09d5cce6a3384e5bc.png" alt="$\sigma \Sigma$"/>
-</p>
+とするのだ．例えば，適当な記号として <code>%</code> を使うことにしよう．
+このとき，Google には <code>P@ssw()rd%Ggle</code>, Dropbox には <code>P@ssw()rd%Dbox</code>, 東北大学メールサーバーには <code>P@ssw()rd%Thml</code> というパスワードを使うのだ．
+</p></div>
+
+</div>
+
+<div id="outline-container-1-1-3" class="outline-4">
+<h4 id="sec-1-1-3"><span class="section-number-4">1.1.3</span> 利点</h4>
+<div class="outline-text-4" id="text-1-1-3">
+
+<ul>
+<li>サービスごとに全く違うパスワードを作る・覚える必要がない．
+</li>
+<li>どれか1つのサイトでパスワードが盗まれても，直ちに別のサービスまで危険になるわけではない．
+</li>
+<li>基本パスコード，記号およびその組み合わせ方さえ秘密にしておけば，個別コードがリークしても直ちに危険にはならない．
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-1-4" class="outline-4">
+<h4 id="sec-1-1-4"><span class="section-number-4">1.1.4</span> 注意点</h4>
+<div class="outline-text-4" id="text-1-1-4">
+
+<ul>
+<li>基本パスコードは6文字以上で，英語大文字・小文字・数字が少くとも1つは入っていることが望ましい．
+</li>
+<li>サイト別パスコードをあまり長くしない．
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-1-5" class="outline-4">
+<h4 id="sec-1-1-5"><span class="section-number-4">1.1.5</span> アレンジを効かせよう</h4>
+<div class="outline-text-4" id="text-1-1-5">
+
+<p>例えば，
+</p><ul>
+<li>個別コードを先に書くことにする(eg. <code>Ggle%P@ssw()rd</code>, <code>Dbox%P@ssw()rd</code>)
+</li>
+<li>個別コードで基本コードを挟む(eg. <code>Gg%P@ssw()rd%le</code>, <code>Db%P@ssw()rd%ox</code>)
+</li>
+<li>記号を変えたり，増やしてみる(eg. <code>P@ssw()rd@Ggle!</code>, <code>P@ssw()rd@Dbox!</code>)
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-1-6" class="outline-4">
+<h4 id="sec-1-1-6"><span class="section-number-4">1.1.6</span> パスコード生成プログラム</h4>
+<div class="outline-text-4" id="text-1-1-6">
+
+
+
+
+<pre class="src src-screen">$ brew install pwgen <span style="color: #ff4500;"># </span><span style="color: #ff4500;">home brew &#12391;&#12452;&#12531;&#12473;&#12488;&#12540;&#12523;</span>
+$ pwgen --help <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#12504;&#12523;&#12503;&#12434;&#35211;&#12427;</span>
+$ pwgen -B -v 8 <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#23569;&#12394;&#12367;&#12392;&#12418;1&#12388;&#12364;&#35352;&#21495;&#12391;&#65292;&#35211;&#38291;&#36949;&#12356;&#26131;&#12356;&#25991;&#23383;&#12434;&#20351;&#12431;&#12394;&#12356;8&#25991;&#23383;&#12398;&#12497;&#12473;&#12467;&#12540;&#12489;&#12434;&#29983;&#25104;</span>
+</pre>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> iCloud への登録</h3>
+<div class="outline-text-3" id="text-1-2">
+
+</div>
 </div>
 
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> test heading 2</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> Mac のセットアップ</h2>
 <div class="outline-text-2" id="text-2">
 
-<p>もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-もへもへもへもへもへもへもへもへもへもへもへもへもへもへ
-</p></div>
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> ソフトウェア・アップデート</h3>
+<div class="outline-text-3" id="text-2-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> spotlight のキーバインド</h3>
+<div class="outline-text-3" id="text-2-2">
+
+</div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> ソフトウェアのインストール方法</h3>
+<div class="outline-text-3" id="text-2-3">
+
+</div>
+
+</div>
+
+<div id="outline-container-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> BetterTouchTools のインストールと設定</h3>
+<div class="outline-text-3" id="text-2-4">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> 各種サービスのアカウント作成とユーティリティのインストール</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Dropbox</h3>
+<div class="outline-text-3" id="text-3-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Github</h3>
+<div class="outline-text-3" id="text-3-2">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> Bitbucket</h3>
+<div class="outline-text-3" id="text-3-3">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> Sugarsync</h3>
+<div class="outline-text-3" id="text-3-4">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> Cloud.app</h3>
+<div class="outline-text-3" id="text-3-5">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-6" class="outline-3">
+<h3 id="sec-3-6"><span class="section-number-3">3.6</span> Evernote (必須ではない)</h3>
+<div class="outline-text-3" id="text-3-6">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> ターミナルの操作に慣れよう</h2>
+<div class="outline-text-2" id="text-4">
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> 基本コマンド</h3>
+<div class="outline-text-3" id="text-4-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> vi の使い方</h3>
+<div class="outline-text-3" id="text-4-2">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Homebrew によるパッケージ管理</h2>
+<div class="outline-text-2" id="text-5">
+
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Emacs &mdash; 最強のエディタ</h2>
+<div class="outline-text-2" id="text-6">
+
+
+</div>
+
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> 基本コマンド</h3>
+<div class="outline-text-3" id="text-6-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> dired &mdash; ファイル管理</h3>
+<div class="outline-text-3" id="text-6-2">
+
+</div>
+
+</div>
+
+<div id="outline-container-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> el-get &mdash; Lisp 管理</h3>
+<div class="outline-text-3" id="text-6-3">
+
+</div>
+
+</div>
+
+<div id="outline-container-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> バッファ &amp; ウィンドウ ~ フレームによる作業</h3>
+<div class="outline-text-3" id="text-6-4">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> LaTeX</h2>
+<div class="outline-text-2" id="text-7">
+
+
+</div>
+
+<div id="outline-container-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> TeXLive 2012 のインストール</h3>
+<div class="outline-text-3" id="text-7-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> コンパイルしてみる</h3>
+<div class="outline-text-3" id="text-7-2">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> org-mde</h2>
+<div class="outline-text-2" id="text-8">
+
+
+</div>
+
+<div id="outline-container-8-1" class="outline-3">
+<h3 id="sec-8-1"><span class="section-number-3">8.1</span> メモを書く</h3>
+<div class="outline-text-3" id="text-8-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-8-2" class="outline-3">
+<h3 id="sec-8-2"><span class="section-number-3">8.2</span> ワーキングペーパーを書く</h3>
+<div class="outline-text-3" id="text-8-2">
+
+</div>
+
+</div>
+
+<div id="outline-container-8-3" class="outline-3">
+<h3 id="sec-8-3"><span class="section-number-3">8.3</span> プレゼン資料を作る</h3>
+<div class="outline-text-3" id="text-8-3">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Git / magit / sourcetree</h2>
+<div class="outline-text-2" id="text-9">
+
+
+</div>
+
+<div id="outline-container-9-1" class="outline-3">
+<h3 id="sec-9-1"><span class="section-number-3">9.1</span> ローカルでの作業管理</h3>
+<div class="outline-text-3" id="text-9-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-9-2" class="outline-3">
+<h3 id="sec-9-2"><span class="section-number-3">9.2</span> リモートリポジトリの使い方</h3>
+<div class="outline-text-3" id="text-9-2">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> SKK / AquaSKK &mdash; シンプル漢字かな入力</h2>
+<div class="outline-text-2" id="text-10">
+
+
+</div>
+
+<div id="outline-container-10-1" class="outline-3">
+<h3 id="sec-10-1"><span class="section-number-3">10.1</span> AquaSKK</h3>
+<div class="outline-text-3" id="text-10-1">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> Octave/gnuplot</h2>
+<div class="outline-text-2" id="text-11">
+
+</div>
+
+</div>
+
+<div id="outline-container-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> C++ によるプログラミング</h2>
+<div class="outline-text-2" id="text-12">
+
+</div>
 </div>
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-02-21 Thu</p>
-<p class="author">Author: Takeshi Nagae</p>
-<p class="creator">Org version 7.8.11 with Emacs version 24</p>
+<p class="date">&#26085;&#20184;: 2013-02-21 Thu</p>
+<p class="author">&#33879;&#32773;: Takeshi Nagae</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.2 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
 
 </div>

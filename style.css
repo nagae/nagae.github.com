@@ -23,3 +23,6 @@ pre {
     color: #ffffff;
     background-color: #1C1E2F;
     }
+span.alert {
+    color: #ff0000;
+}
