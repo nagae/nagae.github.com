@@ -61,6 +61,21 @@
   /*]]>*/-->
 </style>
 <link rel=stylesheet href="../style.css" type="text/css">
+<script type="text/javascript" src="http://orgmode.org/org-info.js"></script>
+<script type="text/javascript" >
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "1");
+org_html_manager.set("LINK_HOME", "../index.html");
+org_html_manager.set("LINK_UP", "./index.html");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "0");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
 <script type="text/javascript">
 <!--/*--><![CDATA[/*><!--*/
  function CodeHighlightOn(elem, id)
@@ -115,16 +130,88 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1 (少しはマシな)パスワードの作り方</a></li>
-<li><a href="#sec-2">2 Mac のセットアップ</a></li>
-<li><a href="#sec-3">3 各種サービスのアカウント作成とユーティリティのインストール</a></li>
-<li><a href="#sec-4">4 ターミナルの操作に慣れよう</a></li>
+<li><a href="#sec-1">1 (少しはマシな)パスワードの作り方</a>
+<ul>
+<li>
+<ul>
+<li><a href="#sec-1-1">1.1 全てのサイトで同じパスワードを使ってはいけない</a></li>
+<li><a href="#sec-1-2">1.2 基本形：基本パスコード + サービス別コード</a></li>
+<li><a href="#sec-1-3">1.3 利点</a></li>
+<li><a href="#sec-1-4">1.4 注意点</a></li>
+<li><a href="#sec-1-5">1.5 アレンジを効かせる</a></li>
+<li><a href="#sec-1-6">1.6 覚え易くてセキュアなパスコードの生成</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 Mac のセットアップ</a>
+<ul>
+<li><a href="#sec-2-1">2.1 まずやること：ソフトウェアアップデート，キーバインドの変更，Trackpad の変更</a>
+<ul>
+<li><a href="#sec-2-1-1">2.1.1 ソフトウェア・アップデートの実行</a></li>
+<li><a href="#sec-2-1-2">2.1.2 ctrl と caps lock を入れ替える</a></li>
+<li><a href="#sec-2-1-3">2.1.3 spotlight のキーバインドを ctrl + shift + space に変更</a></li>
+<li><a href="#sec-2-1-4">2.1.4 Trackpad の設定</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-2">2.2 ソフトウェアのインストール方法</a></li>
+<li><a href="#sec-2-3">2.3 BetterTouchTools のインストールと設定</a>
+<ul>
+<li><a href="#sec-2-3-1">2.3.1 BTT の特徴</a></li>
+<li><a href="#sec-2-3-2">2.3.2 インストール方法</a></li>
+<li><a href="#sec-2-3-3">2.3.3 設定</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 各種サービスのアカウント作成とユーティリティのインストール</a>
+<ul>
+<li><a href="#sec-3-1">3.1 iCloud</a></li>
+<li><a href="#sec-3-2">3.2 Dropbox</a></li>
+<li><a href="#sec-3-3">3.3 Github</a></li>
+<li><a href="#sec-3-4">3.4 Bitbucket</a></li>
+<li><a href="#sec-3-5">3.5 Sugarsync</a></li>
+<li><a href="#sec-3-6">3.6 Cloud.app</a></li>
+<li><a href="#sec-3-7">3.7 Evernote (必須ではない)</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 ターミナルの操作に慣れよう</a>
+<ul>
+<li><a href="#sec-4-1">4.1 基本コマンド</a></li>
+<li><a href="#sec-4-2">4.2 vi の使い方</a></li>
+</ul>
+</li>
 <li><a href="#sec-5">5 Homebrew によるパッケージ管理</a></li>
-<li><a href="#sec-6">6 Emacs &mdash; 最強のエディタ</a></li>
-<li><a href="#sec-7">7 LaTeX</a></li>
-<li><a href="#sec-8">8 org-mde</a></li>
-<li><a href="#sec-9">9 Git / magit / sourcetree</a></li>
-<li><a href="#sec-10">10 SKK / AquaSKK &mdash; シンプル漢字かな入力</a></li>
+<li><a href="#sec-6">6 Emacs &mdash; 最強のエディタ</a>
+<ul>
+<li><a href="#sec-6-1">6.1 基本コマンド</a></li>
+<li><a href="#sec-6-2">6.2 dired &mdash; ファイル管理</a></li>
+<li><a href="#sec-6-3">6.3 el-get &mdash; Lisp 管理</a></li>
+<li><a href="#sec-6-4">6.4 バッファ &amp; ウィンドウ ~ フレームによる作業</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7 LaTeX</a>
+<ul>
+<li><a href="#sec-7-1">7.1 TeXLive 2012 のインストール</a></li>
+<li><a href="#sec-7-2">7.2 コンパイルしてみる</a></li>
+</ul>
+</li>
+<li><a href="#sec-8">8 org-mde</a>
+<ul>
+<li><a href="#sec-8-1">8.1 メモを書く</a></li>
+<li><a href="#sec-8-2">8.2 ワーキングペーパーを書く</a></li>
+<li><a href="#sec-8-3">8.3 プレゼン資料を作る</a></li>
+</ul>
+</li>
+<li><a href="#sec-9">9 Git / magit / sourcetree</a>
+<ul>
+<li><a href="#sec-9-1">9.1 ローカルでの作業管理</a></li>
+<li><a href="#sec-9-2">9.2 リモートリポジトリの使い方</a></li>
+</ul>
+</li>
+<li><a href="#sec-10">10 SKK / AquaSKK &mdash; シンプル漢字かな入力</a>
+<ul>
+<li><a href="#sec-10-1">10.1 AquaSKK</a></li>
+</ul>
+</li>
 <li><a href="#sec-11">11 Octave/gnuplot</a></li>
 <li><a href="#sec-12">12 C++ によるプログラミング</a></li>
 </ul>
