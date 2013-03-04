@@ -62,30 +62,6 @@
 </style>
 <link rel=stylesheet href="../style.css" type="text/css">
 <script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012  Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
 <!--/*--><![CDATA[/*><!--*/
  function CodeHighlightOn(elem, id)
  {
@@ -124,6 +100,7 @@ for the JavaScript code in this tag.
 <h1 class="title">Information Technology Literacy </h1>
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
 <colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" />
 </colgroup>
 <tbody>
@@ -135,7 +112,7 @@ for the JavaScript code in this tag.
 
 
 <div id="table-of-contents">
-<h2>&#30446;&#27425;</h2>
+<h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
 <li><a href="#sec-1">1 (少しはマシな)パスワードの作り方</a></li>
@@ -166,7 +143,9 @@ for the JavaScript code in this tag.
 <div class="outline-text-4" id="text-1-1">
 
 <p>Google, iCloud, Dropbox, 楽天, メールサービス…全てのサイトで同じパスワードを使ってはいけない．
-万が一どれか1つでも盗まれたら，登録している全てのサービスで自由にログインされてしまう．
+万が一どれか1つでも盗まれたら，登録している全てのサービスで自由にログインされてしまうから．
+しかし，サイトごとに違うパスワードを覚えておくのは大変．だからといって紙にメモしては本末転倒．
+そこで，以下のような方法でサイトごとに別々のパスワードを作ることをオススメする．
 </p></div>
 
 </div>
@@ -175,9 +154,11 @@ for the JavaScript code in this tag.
 <h4 id="sec-1-2"><span class="section-number-4">1.2</span> 基本形：基本パスコード + サービス別コード</h4>
 <div class="outline-text-4" id="text-1-2">
 
-<p>例えば，基本パスコードを <code>P@ssw()rd</code> とかとしよう( <span class="alert">使っちゃダメよ</span> )．
-そして，利用するサービスごとの個別コードを，例えば，
+<p>ここでは，サイト別のパスワードを，<b>基本コード</b> と <b>サービス個別コード</b> で構築する方法を紹介する．
+まず，基本パスコードを，例えば， <code>P@ssw()rd</code> とする( <span class="alert">使っちゃダメよ</span> )．
+次に，利用するサービスごとの個別コードを，例えば，
 </p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
 <colgroup><col class="left" /><col class="left" />
 </colgroup>
 <thead>
@@ -190,7 +171,7 @@ for the JavaScript code in this tag.
 </tbody>
 </table>
 
-などとしておく．そして，各サービスで実際に使うパスワードを
+などとする．そして，各サービスで実際に使うパスワードを
 <blockquote>
 
 <p>基本パスコード + 適当な記号 + 個別コード
@@ -199,8 +180,8 @@ for the JavaScript code in this tag.
 
 
 <p>
-とするのだ．例えば，適当な記号として <code>%</code> を使うことにしよう．
-このとき，Google には <code>P@ssw()rd%Ggle</code>, Dropbox には <code>P@ssw()rd%Dbox</code>, 東北大学メールサーバーには <code>P@ssw()rd%Thml</code> というパスワードを使うのだ．
+とする．例えば，適当な記号として <code>%</code> を使う場合，
+Google には <code>P@ssw()rd%Ggle</code>, Dropbox には <code>P@ssw()rd%Dbox</code>, 東北大学メールサーバーには <code>P@ssw()rd%Thml</code> というパスワードを設定する．
 </p></div>
 
 </div>
@@ -210,11 +191,11 @@ for the JavaScript code in this tag.
 <div class="outline-text-4" id="text-1-3">
 
 <ul>
-<li>サービスごとに全く違うパスワードを作る・覚える必要がない．
+<li>サービスごとに全く違うパスワードを覚える必要がない．
 </li>
 <li>どれか1つのサイトでパスワードが盗まれても，直ちに別のサービスまで危険になるわけではない．
 </li>
-<li>基本パスコード，記号およびその組み合わせ方さえ秘密にしておけば，個別コードがリークしても直ちに危険にはならない．
+<li>基本パスコード，記号およびその組み合わせ方さえ秘密にしておけば，個別コードがリークしても直ちに危険にはならない(むしろ，自分が利用しているサイトをメモしておけば，サイト別パスワードを整合的に更新できる)
 </li>
 </ul>
 
@@ -227,9 +208,15 @@ for the JavaScript code in this tag.
 <div class="outline-text-4" id="text-1-4">
 
 <ul>
-<li>基本パスコードは6文字以上で，英語大文字・小文字・数字が少くとも1つは入っていることが望ましい．
+<li>基本パスコードは <span class="alert">6文字以上</span> で，英語の大文字・英語の小文字・数字が，それぞれ，<span class="alert">少くとも1つ</span> は入っていることが望ましい．
+</li>
+<li>辞書に載っている単語，人名，地名，およびそれらを「o→0, ()」「i→1 」「a→@」などと変えたものを そのまま使わない．上記の <code>P@ssw()rd</code> は <span class="alert">使ってはいけない好例</span>
 </li>
 <li>サイト別パスコードをあまり長くしない．
+</li>
+<li>パスワード生成用のWebサイトなどは使わない(一見ランダムに見えるだけで，実は法則性があるかもしれない)．
+</li>
+<li>どうしても思いつかなければ <code>pwgen</code> を使ってみる．
 </li>
 </ul>
 
@@ -238,7 +225,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-1-5" class="outline-4">
-<h4 id="sec-1-5"><span class="section-number-4">1.5</span> アレンジを効かせよう</h4>
+<h4 id="sec-1-5"><span class="section-number-4">1.5</span> アレンジを効かせる</h4>
 <div class="outline-text-4" id="text-1-5">
 
 <p>例えば，
@@ -251,19 +238,21 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 
-
-</div>
+<p>とすると，さらに堅牢になる．
+</p></div>
 
 </div>
 
 <div id="outline-container-1-6" class="outline-4">
-<h4 id="sec-1-6"><span class="section-number-4">1.6</span> パスコード生成プログラム</h4>
+<h4 id="sec-1-6"><span class="section-number-4">1.6</span> 覚え易くてセキュアなパスコードの生成</h4>
 <div class="outline-text-4" id="text-1-6">
 
+<p>基本パスコードは覚え易くてセキュアであることが望ましい．そんなコードを生成するGPL <code>pwgen</code> という UNIX コマンドを使ってみてはどうでしょう．
+<a href="http://sourceforge.net/projects/pwgen/">http://sourceforge.net/projects/pwgen/</a>
+</p>
 
 
-
-<pre class="src src-screen">$ brew install pwgen <span style="color: #ff4500;"># </span><span style="color: #ff4500;">home brew &#12391;&#12452;&#12531;&#12473;&#12488;&#12540;&#12523;</span>
+<pre class="src src-screen">$ brew install pwgen <span style="color: #ff4500;"># </span><span style="color: #ff4500;">homebrew &#12391;&#12452;&#12531;&#12473;&#12488;&#12540;&#12523;</span>
 $ pwgen --help <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#12504;&#12523;&#12503;&#12434;&#35211;&#12427;</span>
 $ pwgen -B -v 8 <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#23569;&#12394;&#12367;&#12392;&#12418;1&#12388;&#12364;&#35352;&#21495;&#12391;&#65292;&#35211;&#38291;&#36949;&#12356;&#26131;&#12356;&#25991;&#23383;&#12434;&#20351;&#12431;&#12394;&#12356;8&#25991;&#23383;&#12398;&#12497;&#12473;&#12467;&#12540;&#12489;&#12434;&#29983;&#25104;</span>
 </pre>
@@ -636,9 +625,9 @@ $ pwgen -B -v 8 <span style="color: #ff4500;"># </span><span style="color: #ff45
 </div>
 
 <div id="postamble">
-<p class="date">&#26085;&#20184;: 2013-02-21 Thu</p>
-<p class="author">&#33879;&#32773;: Takeshi Nagae</p>
-<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.2 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<p class="date">Date: 2013-02-21 Thu</p>
+<p class="author">Author: Takeshi Nagae</p>
+<p class="creator">Org version 7.8.11 with Emacs version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
 
 </div>
