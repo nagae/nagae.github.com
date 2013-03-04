@@ -61,6 +61,10 @@
   /*]]>*/-->
 </style>
 <link rel=stylesheet href="../style.css" type="text/css">
+<style type="text/css">
+#align_left td.left { text-align: left; border:1 solid;}
+#align_left td.right { text-align: right; border:1 solid;}
+</style>
 <script type="text/javascript" src="http://orgmode.org/org-info.js">
 /**
  *
@@ -213,8 +217,9 @@ for the JavaScript code in this tag.
 <li><a href="#sec-2">2 Mac のセットアップ</a>
 <ul>
 <li><a href="#sec-2-1">2.1 まずやること：ソフトウェアアップデート，キーバインドの変更，Trackpad の変更</a></li>
-<li><a href="#sec-2-2">2.2 ソフトウェアのインストール方法</a></li>
-<li><a href="#sec-2-3">2.3 BetterTouchTools のインストールと設定</a></li>
+<li><a href="#sec-2-2">2.2 キーボード・ショートカット</a></li>
+<li><a href="#sec-2-3">2.3 ソフトウェアのインストール方法</a></li>
+<li><a href="#sec-2-4">2.4 BetterTouchTools のインストールと設定</a></li>
 </ul>
 </li>
 <li><a href="#sec-3">3 各種サービスのアカウント作成とユーティリティのインストール</a>
@@ -399,6 +404,21 @@ $ pwgen -B -v 8 <span style="color: #ff4500;"># </span><span style="color: #ff45
 </pre>
 
 </div>
+
+</div>
+
+<div id="outline-container-1-7" class="outline-4">
+<h4 id="sec-1-7"><span class="section-number-4">1.7</span> 参考になるサイト</h4>
+<div class="outline-text-4" id="text-1-7">
+
+<dl>
+<dt><a href="https://www.grc.com/haystack.htm">https://www.grc.com/haystack.htm</a></dt><dd>あなたのパスワードが総当たり攻撃によって「何秒」で破られるかを示してくれる．総当たり攻撃に対してはパスワードの複雑さよりも長さが重要だとする主張も．
+</dd>
+<dt><a href="https://www.grc.com/OffTheGrid.htm">https://www.grc.com/OffTheGrid.htm</a></dt><dd>紙ベースでサイトごとの堅牢なパスワードを生成する方法．
+</dd>
+</dl>
+
+</div>
 </div>
 
 </div>
@@ -463,17 +483,63 @@ $ pwgen -B -v 8 <span style="color: #ff4500;"># </span><span style="color: #ff45
 <h4 id="sec-2-1-4"><span class="section-number-4">2.1.4</span> Trackpad の設定</h4>
 <div class="outline-text-4" id="text-2-1-4">
 
-</div>
+<ul>
+<li>システム環境設定→トラックパッド
+</li>
+</ul>
+
+<p><a href="fig/trackpad.png" ><img src="fig/trackpad.png" alt="cat/spider image" title="trackpad.png" align="center" width="600pt" alt="trackpad.png"/></a>
+</p></div>
 </div>
 
 </div>
 
 <div id="outline-container-2-2" class="outline-3">
-<h3 id="sec-2-2"><span class="section-number-3">2.2</span> ソフトウェアのインストール方法</h3>
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> キーボード・ショートカット</h3>
 <div class="outline-text-3" id="text-2-2">
 
-<p>Mac ではソフトウェアのインストール方法に2通りある
+<ul>
+<li>Mac では ⌘ (command), control, shift, option のキーとアルファベットや数字キーを組み合わえることで様々な機能を呼び出せる．
+  <a href="http://support.apple.com/kb/HT1343?viewlocale=ja_JP">http://support.apple.com/kb/HT1343?viewlocale=ja_JP</a>
+</li>
+</ul>
+
+
+</div>
+
+<div id="outline-container-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> 覚えておくと便利なショートカット</h4>
+<div class="outline-text-4" id="text-2-2-1">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">⌘+c</td><td class="left">コピー</td></tr>
+<tr><td class="left">⌘+v</td><td class="left">ペースト</td></tr>
+<tr><td class="left">⌘+w</td><td class="left">ウィンドウを閉じる</td></tr>
+<tr><td class="left">ctrl + shift + space</td><td class="left">spotlight</td></tr>
+<tr><td class="left">ctrl + option + space</td><td class="left">spotlight を Finder 上で起動</td></tr>
+<tr><td class="left">⌘+h</td><td class="left">ウィンドウを隠す</td></tr>
+<tr><td class="left">⌘+m</td><td class="left">ウィンドウを最小化</td></tr>
+<tr><td class="left">⌘+q</td><td class="left">終了</td></tr>
+<tr><td class="left">⌘+option+esc</td><td class="left">アプリケーションの強制終了</td></tr>
+</tbody>
+</table>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> ソフトウェアのインストール方法</h3>
+<div class="outline-text-3" id="text-2-3">
+
+<p>Mac ではソフトウェアのインストール方法に3通りある．
 </p><ul>
+<li>App Store からインストールする
+</li>
 <li>.app ファイルをアプリケーション・フォルダに移動させる
 </li>
 <li>.pkg ファイルをダブルクリックする
@@ -484,33 +550,105 @@ $ pwgen -B -v 8 <span style="color: #ff4500;"># </span><span style="color: #ff45
 
 </div>
 
-<div id="outline-container-2-3" class="outline-3">
-<h3 id="sec-2-3"><span class="section-number-3">2.3</span> BetterTouchTools のインストールと設定</h3>
-<div class="outline-text-3" id="text-2-3">
+<div id="outline-container-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> BetterTouchTools のインストールと設定</h3>
+<div class="outline-text-3" id="text-2-4">
 
 
 </div>
 
-<div id="outline-container-2-3-1" class="outline-4">
-<h4 id="sec-2-3-1"><span class="section-number-4">2.3.1</span> BTT の特徴</h4>
-<div class="outline-text-4" id="text-2-3-1">
+<div id="outline-container-2-4-1" class="outline-4">
+<h4 id="sec-2-4-1"><span class="section-number-4">2.4.1</span> BTT の特徴</h4>
+<div class="outline-text-4" id="text-2-4-1">
 
-</div>
-
-</div>
-
-<div id="outline-container-2-3-2" class="outline-4">
-<h4 id="sec-2-3-2"><span class="section-number-4">2.3.2</span> インストール方法</h4>
-<div class="outline-text-4" id="text-2-3-2">
+<ul>
+<li>Trackpad による様々なジェスチャーを各種機能に設定できる
+</li>
+</ul>
 
 </div>
 
 </div>
 
-<div id="outline-container-2-3-3" class="outline-4">
-<h4 id="sec-2-3-3"><span class="section-number-4">2.3.3</span> 設定</h4>
-<div class="outline-text-4" id="text-2-3-3">
+<div id="outline-container-2-4-2" class="outline-4">
+<h4 id="sec-2-4-2"><span class="section-number-4">2.4.2</span> インストール方法</h4>
+<div class="outline-text-4" id="text-2-4-2">
 
+<ul>
+<li id="sec-2-4-2-1">マウスを使う場合<br/>
+<ul>
+<li><a href="http://www.boastr.de/">http://www.boastr.de/</a> から BetterTouchTool.zip をダウンロード
+</li>
+<li>BetterTouchTool.zip をダブルクリック
+</li>
+<li>生成された BetterTouchTool.app を <code>/Applications/</code> フォルダに移動．
+</li>
+</ul>
+
+</li>
+</ul>
+<ul>
+<li id="sec-2-4-2-2">ターミナルだけでやる場合<br/>
+
+
+
+<pre class="src src-screen"><span style="color: #b0c4de;">cd</span> ~/Downloads/
+curl -O http://www.boastr.de/BetterTouchTool.zip
+unzip -o BetterTouchTool.zip
+cp -r BetterTouchTool.app/ /Applications/
+rm -r BetterTouchTool.app
+</pre>
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-2-4-3" class="outline-4">
+<h4 id="sec-2-4-3"><span class="section-number-4">2.4.3</span> 設定例</h4>
+<div class="outline-text-4" id="text-2-4-3">
+
+<ul>
+<li id="sec-2-4-3-1">Global<br/>
+<table  border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" ID="align_left">
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">ジェスチャー</th><th scope="col" class="left">機能</th><th scope="col" class="left">解説</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">Corner Click Bottom Right</td><td class="left">Sleep Display</td><td class="left">Trackpadの右下をクリック : ディスプレイをスリープ</td></tr>
+<tr><td class="left">Three Finger Click</td><td class="left">Lookup word under cursor</td><td class="left">3本指クリック: カーソル下の単語を調べる</td></tr>
+<tr><td class="left">Three Finger Clickswipe Down</td><td class="left">Restore old window size</td><td class="left">3本指で下へクリック・スワイプ : ウィンドウのサイズを元に戻す</td></tr>
+<tr><td class="left">Three Finger Clickswipe Left</td><td class="left">Maximize Window Left</td><td class="left">3本指で左へクリック・スワイプ : ウィンドウを画面の左半分にスナップ・最大化</td></tr>
+<tr><td class="left">Three Finger Clickswipe Right</td><td class="left">Maximize Window Right</td><td class="left">3本指で右へクリック・スワイプ : ウィンドウを画面の右半分にスナップ・最大化</td></tr>
+<tr><td class="left">Three Finger Clickswipe Up</td><td class="left">Maximize Window</td><td class="left">3本指で上へクリック・スワイプ : ウィンドウを最大化</td></tr>
+<tr><td class="left">Three Finger Swipe Up</td><td class="left">End (end of the page)</td><td class="left">3本指で上へスワイプ : ページの最後へ（Endと同じ）</td></tr>
+<tr><td class="left">Three Finger Swipe Down</td><td class="left">Home (beginning of the page)</td><td class="left">3本指で下へスワイプ : ページの先頭へ（fn + ←と同じ）</td></tr>
+</tbody>
+</table>
+
+
+</li>
+</ul>
+<ul>
+<li id="sec-2-4-3-2">Safari.app<br/>
+<table  border="2" cellspacing="0" cellpadding="6" rules="all" frame="hsides" ID="align_left">
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">ジェスチャー</th><th scope="col" class="left">機能</th><th scope="col" class="left">解説</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">Three Finger Swipe Left</td><td class="left">⌘⇧]</td><td class="left">3本指で右から左へスワイプ : 右のタブへ</td></tr>
+<tr><td class="left">Three Finger Swipe Right</td><td class="left">⌘⇧[</td><td class="left">3本指で左から右へスワイプ : 左のタブへ</td></tr>
+</tbody>
+</table>
+
+
+</li>
+</ul>
 </div>
 </div>
 </div>
