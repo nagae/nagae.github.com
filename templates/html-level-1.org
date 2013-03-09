@@ -1,0 +1,6 @@
+#+SETUPFILE: ~/home/_work/nagae.github.com/templates/html.org
+#+STYLE: <link rel=stylesheet href="../style.css" type="text/css">
+#+LINK_UP:   ./index.html
+#+LINK_HOME: ../index.html
+#INFOJS_OPT: up:../
+#INFOJS_OPT: home:http:nagae.bitbucket.org

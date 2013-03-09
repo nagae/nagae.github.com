@@ -1,0 +1,259 @@
+#+SETUPFILE: ~/home/_work/nagae.github.com/templates/html-level-1.org
+#+TITLE:     Information Technology Literacy 
+#+AUTHOR:    Takeshi Nagae
+#+EMAIL:     nagae@ftss-server.local
+#+DATE:      2013-02-21 Thu
+#+DESCRIPTION:
+#+KEYWORDS:
+#+OPTIONS: toc:1 num:3
+#+INFOJS_OPT: view:showall toc:nil sdepth:2 ltoc:nil
+
+#+STYLE: <style type="text/css">
+#+STYLE: #align_left td.left { text-align: left; border:1 solid;}
+#+STYLE: #align_left td.right { text-align: right; border:1 solid;}
+#+STYLE: </style>
+
+* (少しはマシな)パスワードの作り方
+*** 全てのサイトで同じパスワードを使ってはいけない
+Google, iCloud, Dropbox, 楽天, メールサービス…全てのサイトで同じパスワードを使ってはいけない．
+万が一どれか1つでも盗まれたら，登録している全てのサービスで自由にログインされてしまうから．
+しかし，サイトごとに違うパスワードを覚えておくのは大変．だからといって紙にメモしては本末転倒．
+そこで，以下のような方法でサイトごとに別々のパスワードを作ることをオススメする．
+*** 基本形：基本パスコード + サービス別コード
+ここでは，サイト別のパスワードを，*基本コード* と *サービス個別コード* で構築する方法を紹介する．
+まず，基本パスコードを，例えば， =P@ssw()rd= とする( @使っちゃダメよ@ )．
+次に，利用するサービスごとの個別コードを，例えば，
+#+ATTR_HTML: ID="align_left" rules="all"
+| サイト名               | 個別コード |
+|------------------------+------------|
+| Google                 | =Ggle=     |
+| Dropbox                | =Dbox=     |
+| 東北大学メールサーバー | =Thml=     |
+などとする．そして，各サービスで実際に使うパスワードを
+#+begin_quote
+基本パスコード + 適当な記号 + 個別コード
+#+end_quote
+とする．例えば，適当な記号として =%= を使う場合，
+Google には =P@ssw()rd%Ggle=, Dropbox には =P@ssw()rd%Dbox=, 東北大学メールサーバーには =P@ssw()rd%Thml= というパスワードを設定する．
+*** 利点
+ - サービスごとに全く違うパスワードを覚える必要がない．
+ - どれか1つのサイトでパスワードが盗まれても，直ちに別のサービスまで危険になるわけではない．
+ - 基本パスコード，記号およびその組み合わせ方さえ秘密にしておけば，個別コードがリークしても直ちに危険にはならない(むしろ，自分が利用しているサイトをメモしておけば，サイト別パスワードを整合的に更新できる)
+*** 注意点
+- 基本パスコードは @6文字以上@ で，英語の大文字・英語の小文字・数字が，それぞれ，@少くとも1つ@ は入っていることが望ましい．
+- 辞書に載っている単語，人名，地名，およびそれらを「o→0, ()」「i→1 」「a→@」などと変えたものを そのまま使わない．上記の =P@ssw()rd= は @使ってはいけない好例@
+- サイト別パスコードをあまり長くしない．
+- パスワード生成用のWebサイトなどは使わない(一見ランダムに見えるだけで，実は法則性があるかもしれない)．
+- どうしても思いつかなければ =pwgen= を使ってみる．
+*** アレンジを効かせる
+例えば，
+- 個別コードを先に書くことにする(eg. =Ggle%P@ssw()rd=, =Dbox%P@ssw()rd=)
+- 個別コードで基本コードを挟む(eg. =Gg%P@ssw()rd%le=, =Db%P@ssw()rd%ox=)
+- 記号を変えたり，増やしてみる(eg. =P@ssw()rd@Ggle!=, =P@ssw()rd@Dbox!=)
+とすると，さらに堅牢になる．
+*** 覚え易くてセキュアなパスコードの生成
+基本パスコードは覚え易くてセキュアであることが望ましい．そんなコードを生成するGPL =pwgen= という UNIX コマンドを使ってみてはどうでしょう．
+http://sourceforge.net/projects/pwgen/
+#+begin_src screen
+$ brew install pwgen # homebrew でインストール
+$ pwgen --help # ヘルプを見る
+$ pwgen -B -v 8 # 少なくとも1つが記号で，見間違い易い文字を使わない8文字のパスコードを生成
+#+end_src
+*** 参考になるサイト
+- https://www.grc.com/haystack.htm :: あなたのパスワードが総当たり攻撃によって「何秒」で破られるかを示してくれる．総当たり攻撃に対してはパスワードの複雑さよりも長さが重要だとする主張も．
+- https://www.grc.com/OffTheGrid.htm :: 紙ベースでサイトごとの堅牢なパスワードを生成する方法．
+* Mac のセットアップ
+** まずやること：ソフトウェアアップデート，キーバインドの変更，Trackpad の変更
+*** ソフトウェア・アップデートの実行
+Mac に入っている OS が最新のものになっていない場合，後述する機能が使えない可能性があるばかりか，悪意のある攻撃に対する脆弱性が修正されていないかもしれない．
+- メニューバー左上のリンゴマーク→ソフトウェア・アップデートを実行
+*** ctrl と caps lock を入れ替える
+本研究室では ctrl を多用するので，あまり使わない caps lock と入れ替える．
+- システム環境設定→キーボード→修飾キー を開いて設定
+*** spotlight のキーバインドを ctrl + shift + space に変更
+デフォルトでは ctrl + space だが，このキーバインドは後述する Emacs で「mark set」の機能に割当てられている．
+- システム環境設定→spotlight を開いて設定
+*** Trackpad の設定
+- システム環境設定→トラックパッド
+#+ATTR_HTML: alt="trackpad設定" align="center" width="600"
+[[file:fig/trackpad.png]]
+** キーボード・ショートカット
+- Mac では ⌘ (command), control, shift, option のキーとアルファベットや数字キーを組み合わえることで様々な機能を呼び出せる．
+  http://support.apple.com/kb/HT1343?viewlocale=ja_JP
+*** 覚えておくと便利なショートカット
+#+ATTR_HTML: ID="align_left" rules="all"
+| ショートカット        | 機能                         |
+|-----------------------+------------------------------|
+| ⌘+c                   | コピー                       |
+| ⌘+v                   | ペースト                     |
+| ⌘+w                   | ウィンドウを閉じる           |
+| ctrl + shift + space  | spotlight                    |
+| ctrl + option + space | spotlight を Finder 上で起動 |
+| ⌘+h                   | ウィンドウを隠す     |
+| ⌘+m                   | ウィンドウを最小化  |
+| ⌘+q                   | 終了                         |
+| ⌘+option+esc          | アプリケーションの強制終了   |
+* ターミナルの操作に慣れよう
+** 基本コマンド
+** vi の使い方
+* ソフトウェアのインストール方法
+Mac ではソフトウェアのインストール方法に3通りある．
+- App Store からインストールする
+- .app ファイルをアプリケーション・フォルダに移動させる
+- .pkg ファイルをダブルクリックする
+* BetterTouchTools のインストールと設定
+** BTT の特徴
+- Trackpad による様々なジェスチャーを各種機能に設定できる
+** インストール方法
+*** マウスを使う場合
+- http://www.boastr.de/ から BetterTouchTool.zip をダウンロード
+- BetterTouchTool.zip をダブルクリック
+- 生成された BetterTouchTool.app を =/Applications/= フォルダに移動．
+*** ターミナルだけでやる場合
+#+BEGIN_SRC screen
+cd ~/Downloads/
+curl -O http://www.boastr.de/BetterTouchTool.zip
+unzip -o BetterTouchTool.zip
+cp -r BetterTouchTool.app/ /Applications/
+rm -r BetterTouchTool.app
+#+END_SRC
+** 設定例
+*** Global
+#+ATTR_HTML: ID="align_left" rules="all"
+| ジェスチャー | 機能 | 解説 |
+|-------------------------------+------------------------------+----------------------------------------------------------------------------|
+| Corner Click Bottom Right     | Sleep Display                | Trackpadの右下をクリック : ディスプレイをスリープ                          |
+| Three Finger Click            | Lookup word under cursor     | 3本指クリック: カーソル下の単語を調べる                                    |
+| Three Finger Clickswipe Down  | Restore old window size      | 3本指で下へクリック・スワイプ : ウィンドウのサイズを元に戻す               |
+| Three Finger Clickswipe Left  | Maximize Window Left         | 3本指で左へクリック・スワイプ : ウィンドウを画面の左半分にスナップ・最大化 |
+| Three Finger Clickswipe Right | Maximize Window Right        | 3本指で右へクリック・スワイプ : ウィンドウを画面の右半分にスナップ・最大化 |
+| Three Finger Clickswipe Up    | Maximize Window              | 3本指で上へクリック・スワイプ : ウィンドウを最大化                         |
+| Three Finger Swipe Up         | End (end of the page)        | 3本指で上へスワイプ : ページの最後へ（Endと同じ）                          |
+| Three Finger Swipe Down       | Home (beginning of the page) | 3本指で下へスワイプ : ページの先頭へ（fn + ←と同じ）                      |
+
+*** Safari.app
+#+ATTR_HTML: ID="align_left" rules="all"
+| ジェスチャー             | 機能 | 解説                                   |
+|--------------------------+------+----------------------------------------|
+| Three Finger Swipe Left  | ⌘⇧]  | 3本指で右から左へスワイプ : 右のタブへ |
+| Three Finger Swipe Right | ⌘⇧[  | 3本指で左から右へスワイプ : 左のタブへ |
+* 各種サービスのアカウント作成とユーティリティのインストール
+** iCloud (https://www.icloud.com)
+*** 特徴
+- 5GBのクラウドストレージ．
+- MacやiOS デバイス間でMail/Safariのブックマーク/iCalendarを同期させたり，iOSデバイスのデータや設定をバックアップしたりできる．
+- GoodReaderを始め，各種iOS Appからのアクセスが容易だが，ローカル・フォルダとの同期は無い．
+*** アカウント作成・ユーティリティ
+- http://www.apple.com/jp/icloud/setup/mac.html を参考に
+** Dropbox (https://www.dropbox.com/)
+*** 特徴
+- 2GBのクラウドストレージ．
+- *30日まで* 履歴を保存しているので，うっかり上書き・削除してしまっても復元可能．
+- ローカルの =~/Dropbox= フォルダと自動的に同期．
+- .emacs, texmf, skk 辞書などの保存には便利．
+*** アカウント作成・ユーティリティ
+- http://db.tt/pqpSl9b からアカウントを作成
+- https://www.dropbox.com/downloading?src=index からユーティリティをダウンロード．
+** Sugarsync (
+*** 特徴
+- 5GBのクラウドストレージ．
+- 任意のフォルダを共有可能，Drag & Drop で共有可能など，閲覧・編集の許可など，Dropbox よりもファイルの共有機能を細かく設定可能．
+*** アカウント作成・ユーティリティ
+- http://www.sugarsync.jp/howto/index.html を参考に．無料で十分．
+** Cloud.app
+*** 特徴
+- ファイル共有機能に特化
+- 1日に10ファイルまで，各ファイル
+** Github
+*** 特徴
+- 
+** Bitbucket
+** Evernote (必須ではない)
+** Github / Bitbucket に SSH で接続する
+*** 公開鍵と秘密鍵の作成
+- =~/.ssh= にSSH用の公開鍵と秘密鍵を作る
+  #+begin_src screen
+  mkdir ~/.ssh                    # ssh用のディレクトリを作る
+  cd ~/.ssh
+  ssh-keygen -t rsa -f id_rsa     # id_rsa という秘密鍵と id_rsa.pub という公開鍵を作る
+  chmod 700 ~/.ssh
+  chmod 600 ~/.ssh/id_rsa.pub 
+  #+end_src
+*** Bitbucket に SSH の公開鍵を登録する
+- [[https://bitbucket.org/][Bitbucket]] の右上のアバターから「Manage account」を選ぶ
+- 左側のメニューから「SSH keys」を選び，「Add Key」をクリック
+- 適当なラベルを与えたあと，公開鍵を Keys にコピーする．ターミナル上で
+  #+begin_src screen
+  pbcopy < ~/.ssh/id_rsa.pub
+  #+end_src
+  としてから Key のところでペーストすると簡単．
+- =~/.ssh/config/= に以下を記載
+  #+begin_src config
+  Host bitbucket
+   User git
+   Port 22
+   Hostname bitbucket.org
+   IdentityFile ~/.ssh/id_rsa
+   TCPKeepAlive yes
+   IdentitiesOnly yes
+  #+end_src
+*** Github に SSH の公開鍵を登録する
+- [[https://github.com/][github.com]] の右上のユーザー名をクリックし「Edit Your Profile」を選ぶ
+- 左側のメニューから「SSH Keys」を選び，「Add SSH Key」をクリック
+- 適当なラベルを与えた後，公開鍵を Key にコピーする.ターミナル上で
+  #+begin_src screen
+  pbcopy < ~/.ssh/id_rsa.pub
+  #+end_src
+  としてから Key のところでペーストすると簡単．
+- =~/.ssh/config/= に以下を記載
+  #+begin_example
+  Host github
+   User git
+   Port 22
+   Hostname github.com
+   IdentityFile ~/.ssh/id_rsa
+   TCPKeepAlive yes
+   IdentitiesOnly yes
+  #+end_example
+
+* Homebrew によるパッケージ管理
+* Emacs --- 最強のエディタ
+** 基本コマンド
+** dired --- ファイル管理
+** el-get --- Lisp 管理 
+** バッファ & ウィンドウ ~ フレームによる作業
+* LaTeX
+** TeXLive 2012 のインストール
+** コンパイルしてみる
+* org-mde
+** メモを書く
+** ワーキングペーパーを書く
+** プレゼン資料を作る
+* Git / magit / sourcetree
+** インストール
+- homebrew で簡単にインストールできる
+#+BEGIN_SRC screen
+brew install git
+#+END_SRC
+** 基本コマンド
+git status, 現在の状態を確認
+git branch, 現在のブランチを確認
+git log, 
+
+git add file1 file2 file3..., ファイルをステージに乗せる
+git commit -m "message", 'message' をつけてコミットする
+git rm file1 file2 file3..., ファイルを消去し，それを反映させる
+git rm --cached file1 file2..., ファイル本体は消去せず，トラックから外す
+** ローカルでの作業管理
+*** 日常的なワークフロー
+- 作業開始日時のブランチを作り，checkout する
+#+BEGIN_SRC screen
+git checkout -b 130401_0930
+#+END_SRC
+*** 論文執筆の場合
+** リモートリポジトリへの push/pull
+** 複数人で共著
+* SKK / AquaSKK --- シンプル漢字かな入力
+** AquaSKK
+* Octave/gnuplot
+* C++ によるプログラミング

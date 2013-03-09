@@ -65,8 +65,64 @@
 #align_left td.left { text-align: left; border:1 solid;}
 #align_left td.right { text-align: right; border:1 solid;}
 </style>
-<script type="text/javascript" src="http://orgmode.org/org-info.js"></script>
-<script type="text/javascript" >
+<script type="text/javascript" src="http://orgmode.org/org-info.js">
+/**
+ *
+ * @source: http://orgmode.org/org-info.js
+ *
+ * @licstart  The following is the entire license notice for the
+ *  JavaScript code in http://orgmode.org/org-info.js.
+ *
+ * Copyright (C) 2012  Sebastian Rose
+ *
+ *
+ * The JavaScript code in this tag is free software: you can
+ * redistribute it and/or modify it under the terms of the GNU
+ * General Public License (GNU GPL) as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option)
+ * any later version.  The code is distributed WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you
+ * may distribute non-source (e.g., minimized or compacted) forms of
+ * that code without the copy of the GNU GPL normally required by
+ * section 4, provided you include this license notice and a URL
+ * through which recipients can access the Corresponding Source.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in http://orgmode.org/org-info.js.
+ *
+ */
+</script>
+
+<script type="text/javascript">
+
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+
 <!--/*--><![CDATA[/*><!--*/
 org_html_manager.set("TOC_DEPTH", "1");
 org_html_manager.set("LINK_HOME", "../index.html");
@@ -81,6 +137,30 @@ org_html_manager.setup();  // activate after the parameters are set
 /*]]>*///-->
 </script>
 <script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012  Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
 <!--/*--><![CDATA[/*><!--*/
  function CodeHighlightOn(elem, id)
  {
@@ -121,7 +201,7 @@ org_html_manager.setup();  // activate after the parameters are set
 
 
 <div id="table-of-contents">
-<h2>Table of Contents</h2>
+<h2>&#30446;&#27425;</h2>
 <div id="text-table-of-contents">
 <ul>
 <li><a href="#sec-1">1 (少しはマシな)パスワードの作り方</a></li>
@@ -181,8 +261,11 @@ org_html_manager.setup();  // activate after the parameters are set
 </li>
 <li><a href="#sec-11">11 Git / magit / sourcetree</a>
 <ul>
-<li><a href="#sec-11-1">11.1 ローカルでの作業管理</a></li>
-<li><a href="#sec-11-2">11.2 リモートリポジトリの使い方</a></li>
+<li><a href="#sec-11-1">11.1 インストール</a></li>
+<li><a href="#sec-11-2">11.2 基本コマンド</a></li>
+<li><a href="#sec-11-3">11.3 ローカルでの作業管理</a></li>
+<li><a href="#sec-11-4">11.4 リモートリポジトリへの push/pull</a></li>
+<li><a href="#sec-11-5">11.5 複数人で共著</a></li>
 </ul>
 </li>
 <li><a href="#sec-12">12 SKK / AquaSKK &mdash; シンプル漢字かな入力</a>
@@ -223,7 +306,6 @@ org_html_manager.setup();  // activate after the parameters are set
 まず，基本パスコードを，例えば， <code>P@ssw()rd</code> とする( <span class="alert">使っちゃダメよ</span> )．
 次に，利用するサービスごとの個別コードを，例えば，
 </p><table  border="2" cellspacing="0" cellpadding="6" rules="all" frame="hsides" ID="align_left">
-<caption></caption>
 <colgroup><col class="left" /><col class="left" />
 </colgroup>
 <thead>
@@ -431,7 +513,6 @@ $ pwgen -B -v 8 <span style="color: #ff4500;"># </span><span style="color: #ff45
 <div class="outline-text-4" id="text-2-2-1">
 
 <table  border="2" cellspacing="0" cellpadding="6" rules="all" frame="hsides" ID="align_left">
-<caption></caption>
 <colgroup><col class="left" /><col class="left" />
 </colgroup>
 <thead>
@@ -573,7 +654,6 @@ rm -r BetterTouchTool.app
 <div class="outline-text-4" id="text-5-3-1">
 
 <table  border="2" cellspacing="0" cellpadding="6" rules="all" frame="hsides" ID="align_left">
-<caption></caption>
 <colgroup><col class="left" /><col class="left" /><col class="left" />
 </colgroup>
 <thead>
@@ -601,7 +681,6 @@ rm -r BetterTouchTool.app
 <div class="outline-text-4" id="text-5-3-2">
 
 <table  border="2" cellspacing="0" cellpadding="6" rules="all" frame="hsides" ID="align_left">
-<caption></caption>
 <colgroup><col class="left" /><col class="left" /><col class="left" />
 </colgroup>
 <thead>
@@ -1025,16 +1104,87 @@ chmod 600 ~/.ssh/id_rsa.pub
 </div>
 
 <div id="outline-container-11-1" class="outline-3">
-<h3 id="sec-11-1"><span class="section-number-3">11.1</span> ローカルでの作業管理</h3>
+<h3 id="sec-11-1"><span class="section-number-3">11.1</span> インストール</h3>
 <div class="outline-text-3" id="text-11-1">
+
+<ul>
+<li>homebrew で簡単にインストールできる
+</li>
+</ul>
+
+
+
+
+<pre class="src src-screen">brew install git
+</pre>
 
 </div>
 
 </div>
 
 <div id="outline-container-11-2" class="outline-3">
-<h3 id="sec-11-2"><span class="section-number-3">11.2</span> リモートリポジトリの使い方</h3>
+<h3 id="sec-11-2"><span class="section-number-3">11.2</span> 基本コマンド</h3>
 <div class="outline-text-3" id="text-11-2">
+
+<p>git status, 現在の状態を確認
+git branch, 現在のブランチを確認
+git log, 
+</p>
+<p>
+git add file1 file2 file3&hellip;, ファイルをステージに乗せる
+git commit -m "message", 'message' をつけてコミットする
+git rm file1 file2 file3&hellip;, ファイルを消去し，それを反映させる
+git rm &ndash;cached file1 file2&hellip;, ファイル本体は消去せず，トラックから外す
+</p></div>
+
+</div>
+
+<div id="outline-container-11-3" class="outline-3">
+<h3 id="sec-11-3"><span class="section-number-3">11.3</span> ローカルでの作業管理</h3>
+<div class="outline-text-3" id="text-11-3">
+
+
+</div>
+
+<div id="outline-container-11-3-1" class="outline-4">
+<h4 id="sec-11-3-1"><span class="section-number-4">11.3.1</span> 日常的なワークフロー</h4>
+<div class="outline-text-4" id="text-11-3-1">
+
+<ul>
+<li>作業開始日時のブランチを作り，checkout する
+</li>
+</ul>
+
+
+
+
+<pre class="src src-screen">git checkout -b 130401_0930
+</pre>
+
+</div>
+
+</div>
+
+<div id="outline-container-11-3-2" class="outline-4">
+<h4 id="sec-11-3-2"><span class="section-number-4">11.3.2</span> 論文執筆の場合</h4>
+<div class="outline-text-4" id="text-11-3-2">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-11-4" class="outline-3">
+<h3 id="sec-11-4"><span class="section-number-3">11.4</span> リモートリポジトリへの push/pull</h3>
+<div class="outline-text-3" id="text-11-4">
+
+</div>
+
+</div>
+
+<div id="outline-container-11-5" class="outline-3">
+<h3 id="sec-11-5"><span class="section-number-3">11.5</span> 複数人で共著</h3>
+<div class="outline-text-3" id="text-11-5">
 
 </div>
 </div>
@@ -1074,9 +1224,9 @@ chmod 600 ~/.ssh/id_rsa.pub
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2013-02-21 Thu</p>
-<p class="author">Author: Takeshi Nagae</p>
-<p class="creator">Org version 7.8.11 with Emacs version 24</p>
+<p class="date">&#26085;&#20184;: 2013-02-21 Thu</p>
+<p class="author">&#33879;&#32773;: Takeshi Nagae</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.2 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
 
 </div>

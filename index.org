@@ -1,0 +1,20 @@
+#+SETUPFILE: ~/home/_work/nagae.github.com/templates/html-level-0.org
+#+TITLE:     長江研究室
+#+AUTHOR:    Takeshi Nagae
+#+EMAIL:     nagae@m.tohoku.ac.jp
+#+LINK_UP: ./index.html
+#+LINK_HOME: ./index.html
+#+OPTIONS: H:2 num:2 toc:1
+#+INFOJS_OPT: view:showall toc:nil sdepth:2 ltoc:nil
+
+* 研究室関連
+** ITL(/information technology literacy/)
+- [[file:itl/index.org][ゼミ資料]]
+** 論文の執筆方法
+** プレゼン資料の作成方法
+* 講義関連
+** 交通社会システム論
+** 技術社会システム論
+** システム工学
+** 情報基礎B
+** 計画及び製図II
