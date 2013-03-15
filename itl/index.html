@@ -73,7 +73,7 @@
  * @licstart  The following is the entire license notice for the
  *  JavaScript code in http://orgmode.org/org-info.js.
  *
- * Copyright (C) 2012  Sebastian Rose
+ * Copyright (C) 2012-2013  Sebastian Rose
  *
  *
  * The JavaScript code in this tag is free software: you can
@@ -102,7 +102,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012  Free Software Foundation, Inc.
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -141,7 +141,7 @@ org_html_manager.setup();  // activate after the parameters are set
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012  Free Software Foundation, Inc.
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -261,11 +261,12 @@ for the JavaScript code in this tag.
 </li>
 <li><a href="#sec-11">11 Git / magit / sourcetree</a>
 <ul>
-<li><a href="#sec-11-1">11.1 インストール</a></li>
-<li><a href="#sec-11-2">11.2 基本コマンド</a></li>
-<li><a href="#sec-11-3">11.3 ローカルでの作業管理</a></li>
-<li><a href="#sec-11-4">11.4 リモートリポジトリへの push/pull</a></li>
-<li><a href="#sec-11-5">11.5 複数人で共著</a></li>
+<li><a href="#sec-11-1">11.1 参考文献</a></li>
+<li><a href="#sec-11-2">11.2 インストール</a></li>
+<li><a href="#sec-11-3">11.3 基本コマンド</a></li>
+<li><a href="#sec-11-4">11.4 ローカルでの作業管理</a></li>
+<li><a href="#sec-11-5">11.5 リモートリポジトリへの push/pull</a></li>
+<li><a href="#sec-11-6">11.6 複数人で共著</a></li>
 </ul>
 </li>
 <li><a href="#sec-12">12 SKK / AquaSKK &mdash; シンプル漢字かな入力</a>
@@ -1104,8 +1105,25 @@ chmod 600 ~/.ssh/id_rsa.pub
 </div>
 
 <div id="outline-container-11-1" class="outline-3">
-<h3 id="sec-11-1"><span class="section-number-3">11.1</span> インストール</h3>
+<h3 id="sec-11-1"><span class="section-number-3">11.1</span> 参考文献</h3>
 <div class="outline-text-3" id="text-11-1">
+
+<dl>
+<dt>Pro Git (<a href="http://git-scm.com/book/ja/">http://git-scm.com/book/ja/</a>)</dt><dd>オンラインで読める
+</dd>
+<dt>入門Git (<a href="http://www.amazon.co.jp/dp/427406767X">http://www.amazon.co.jp/dp/427406767X</a>)</dt><dd>初心者にも判り易い
+</dd>
+<dt>Gitポケットリファレンス (<a href="http://www.amazon.co.jp/dp/477415184X">http://www.amazon.co.jp/dp/477415184X</a>)</dt><dd>ある程度使い方をマスターしたら手許に欲しい
+</dd>
+</dl>
+
+</div>
+
+</div>
+
+<div id="outline-container-11-2" class="outline-3">
+<h3 id="sec-11-2"><span class="section-number-3">11.2</span> インストール</h3>
+<div class="outline-text-3" id="text-11-2">
 
 <ul>
 <li>homebrew で簡単にインストールできる
@@ -1122,9 +1140,9 @@ chmod 600 ~/.ssh/id_rsa.pub
 
 </div>
 
-<div id="outline-container-11-2" class="outline-3">
-<h3 id="sec-11-2"><span class="section-number-3">11.2</span> 基本コマンド</h3>
-<div class="outline-text-3" id="text-11-2">
+<div id="outline-container-11-3" class="outline-3">
+<h3 id="sec-11-3"><span class="section-number-3">11.3</span> 基本コマンド</h3>
+<div class="outline-text-3" id="text-11-3">
 
 <p>git status, 現在の状態を確認
 git branch, 現在のブランチを確認
@@ -1139,18 +1157,33 @@ git rm &ndash;cached file1 file2&hellip;, ファイル本体は消去せず，�
 
 </div>
 
-<div id="outline-container-11-3" class="outline-3">
-<h3 id="sec-11-3"><span class="section-number-3">11.3</span> ローカルでの作業管理</h3>
-<div class="outline-text-3" id="text-11-3">
+<div id="outline-container-11-4" class="outline-3">
+<h3 id="sec-11-4"><span class="section-number-3">11.4</span> ローカルでの作業管理</h3>
+<div class="outline-text-3" id="text-11-4">
 
-<p>以下では，<code>read_n_line</code> というディレクトリ下をGitで管理する場合を想定する．
-ここでは，C++を用いて「指定されたテキストの最初のn行を表示させるプログラム」を作成する．
-</p>
+<p>以下では，<code>~/workspace/read_n_line</code> というディレクトリ下で，C++を用いた「指定されたテキストファイルの最初のn行を表示させるプログラム」の開発をGitで管理する場合を例示する．
+</p><ul>
+<li>要求仕様として，
+<ul>
+<li>テキストファイルと出力行数はいずれもコマンドラインから指定できる．
+</li>
+<li>出力行数は省略可能(デフォルト値:n=3を使用する)．
+</li>
+<li>存在しないファイルを指定した場合はエラーメッセージを出力する．
+</li>
+<li>指定したテキストファイル内の行数が指定行数よりも少ない場合は，当該ファイルの全内容を出力する．
+</li>
+</ul>
+
+</li>
+</ul>
+
+
 </div>
 
-<div id="outline-container-11-3-1" class="outline-4">
-<h4 id="sec-11-3-1"><span class="section-number-4">11.3.1</span> セットアップ</h4>
-<div class="outline-text-4" id="text-11-3-1">
+<div id="outline-container-11-4-1" class="outline-4">
+<h4 id="sec-11-4-1"><span class="section-number-4">11.4.1</span> セットアップ</h4>
+<div class="outline-text-4" id="text-11-4-1">
 
 
 
@@ -1158,26 +1191,76 @@ git rm &ndash;cached file1 file2&hellip;, ファイル本体は消去せず，�
 <pre class="src src-screen">$ mkdir ~/workspace/read_n_line <span style="color: #ff4500;"># </span><span style="color: #ff4500;">read_n_line &#12487;&#12451;&#12524;&#12463;&#12488;&#12522;&#12434;&#20316;&#25104;&#12375;&#12390;</span>
 $ cd ~/workspace/read_n_line    <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#31227;&#21205;&#12377;&#12427;</span>
 $ git init                      <span style="color: #ff4500;"># </span><span style="color: #ff4500;">&#21021;&#26399;&#21270;&#12434;&#34892;&#12358;</span>
-Initialized empty Git repository<span style="color: #00ffff;"> in</span> /Users/username/read_n_line/.git/
+Initialized empty Git repository<span style="color: #00ffff;"> in</span> /Users/username/workspace/read_n_line/.git/
 </pre>
 
 </div>
 
 </div>
 
-<div id="outline-container-11-3-2" class="outline-4">
-<h4 id="sec-11-3-2"><span class="section-number-4">11.3.2</span> 最初のファイルとコミット</h4>
-<div class="outline-text-4" id="text-11-3-2">
+<div id="outline-container-11-4-2" class="outline-4">
+<h4 id="sec-11-4-2"><span class="section-number-4">11.4.2</span> 最初のファイルとコミット</h4>
+<div class="outline-text-4" id="text-11-4-2">
 
-<p>まずは
-</p>
+<p>まずは，ソースコード自体の最初の3行を表示するテストプログラムを作成しよう．
+</p><ul>
+<li id="sec-11-4-2-1"><code>main.cpp</code> の作成<br/>
+<code>read_n_line</code> ディレクトリに，以下の内容で <code>main.cpp</code> というファイルを作る．
+
+
+
+<pre class="src src-c++"><span style="color: #7fffd4;">#include</span> <span style="color: #ffa07a;">&lt;iostream&gt;</span>
+<span style="color: #7fffd4;">#include</span> <span style="color: #ffa07a;">&lt;fstream&gt;</span>
+<span style="color: #00ffff;">using</span> <span style="color: #00ffff;">namespace</span> <span style="color: #7fffd4;">std</span>;
+<span style="color: #98fb98;">int</span> <span style="color: #87cefa;">main</span> ( <span style="color: #98fb98;">int</span> <span style="color: #eedd82;">argc</span>, <span style="color: #98fb98;">char</span> *<span style="color: #eedd82;">argv</span>[] ) {
+  <span style="color: #ff4500;">// </span><span style="color: #ff4500;">&#34920;&#31034;&#34892;&#25968;&#12399;3&#34892;&#12391;&#22266;&#23450;</span>
+  <span style="color: #98fb98;">int</span> <span style="color: #eedd82;">num_line</span> = 3;
+  <span style="color: #ff4500;">// </span><span style="color: #ff4500;">"main.cpp" &#12398;&#12501;&#12449;&#12452;&#12523;&#21517;&#12391; fstream &#12434;&#20837;&#21147;&#12514;&#12540;&#12489;(ios::in)&#12391;&#38283;&#12367;</span>
+  <span style="color: #98fb98;">ifstream</span> <span style="color: #eedd82;">ifs</span>(<span style="color: #ffa07a;">"main.cpp"</span>, <span style="color: #7fffd4;">ios</span>::in);
+  <span style="color: #ff4500;">// </span><span style="color: #ff4500;">&#26368;&#21021;&#12398; [num_line] &#34892;&#12434;&#35501;&#12415;&#20986;&#12375;&#12390;&#34920;&#31034;&#12377;&#12427;</span>
+  <span style="color: #00ffff;">for</span> ( <span style="color: #98fb98;">int</span> <span style="color: #eedd82;">i</span>=0; i&lt;num_line; ++i ){
+    <span style="color: #00ffff;">if</span> ( !ifs ) { <span style="color: #00ffff;">break</span>; }      <span style="color: #ff4500;">// </span><span style="color: #ff4500;">&#12501;&#12449;&#12452;&#12523;&#12398;&#32066;&#31471;&#12395;&#26469;&#12383;&#12425;(ie. ifs &#12364;</span>
+                                <span style="color: #ff4500;">// </span><span style="color: #ff4500;">null&#12395;&#12394;&#12387;&#12383;&#12425;)&#65292;break &#12391;&#12523;&#12540;&#12503;&#12434;&#25244;</span>
+                                <span style="color: #ff4500;">// </span><span style="color: #ff4500;">&#12369;&#12427;</span>
+    <span style="color: #98fb98;">string</span> <span style="color: #eedd82;">line_buf</span>;
+    getline( ifs, line_buf );   <span style="color: #ff4500;">// </span><span style="color: #ff4500;">getline &#20351;&#12387;&#12390; ifs &#12363;&#12425; line_buf &#12395;</span>
+                                <span style="color: #ff4500;">// </span><span style="color: #ff4500;">1&#34892;&#20998;&#12398;&#12486;&#12461;&#12473;&#12488;&#12434;&#35501;&#12415;&#36796;&#12416;</span>
+    cout &lt;&lt; line_buf &lt;&lt; endl;
+  }
+  <span style="color: #00ffff;">return</span> 0;
+}
+</pre>
+
+</li>
+</ul>
+<ul>
+<li id="sec-11-4-2-2">コンパイルと実行<br/>
+ターミナル上で <code>g++</code> コマンドを使ってコンパイルし，実行してみる：
+
+
+
+<pre class="src src-screen">$ g++ main.cpp
+$ ./a.out
+<span style="color: #ff4500;">#</span><span style="color: #ff4500;">include &lt;iostream&gt;   # 1: </span>
+<span style="color: #ff4500;">#</span><span style="color: #ff4500;">include &lt;fstream&gt;    # 2: main.cpp &#12398;&#26368;&#21021;&#12398;3&#34892;&#12364;&#34920;&#31034;&#12373;&#12428;&#12390;&#12356;&#12427;</span>
+using namespace std;  <span style="color: #ff4500;"># </span><span style="color: #ff4500;">3:</span>
+</pre>
+
+</li>
+</ul>
+<ul>
+<li id="sec-11-4-2-3">実行<br/>
+
+
+</li>
+</ul>
 </div>
 
 </div>
 
-<div id="outline-container-11-3-3" class="outline-4">
-<h4 id="sec-11-3-3"><span class="section-number-4">11.3.3</span> 日常的なワークフロー</h4>
-<div class="outline-text-4" id="text-11-3-3">
+<div id="outline-container-11-4-3" class="outline-4">
+<h4 id="sec-11-4-3"><span class="section-number-4">11.4.3</span> 日常的なワークフロー</h4>
+<div class="outline-text-4" id="text-11-4-3">
 
 <ul>
 <li>作業開始日時のブランチを作り，checkout する
@@ -1194,26 +1277,26 @@ Initialized empty Git repository<span style="color: #00ffff;"> in</span> /Users/
 
 </div>
 
-<div id="outline-container-11-3-4" class="outline-4">
-<h4 id="sec-11-3-4"><span class="section-number-4">11.3.4</span> 論文執筆の場合</h4>
-<div class="outline-text-4" id="text-11-3-4">
+<div id="outline-container-11-4-4" class="outline-4">
+<h4 id="sec-11-4-4"><span class="section-number-4">11.4.4</span> 論文執筆の場合</h4>
+<div class="outline-text-4" id="text-11-4-4">
 
 </div>
-</div>
-
-</div>
-
-<div id="outline-container-11-4" class="outline-3">
-<h3 id="sec-11-4"><span class="section-number-3">11.4</span> リモートリポジトリへの push/pull</h3>
-<div class="outline-text-3" id="text-11-4">
-
 </div>
 
 </div>
 
 <div id="outline-container-11-5" class="outline-3">
-<h3 id="sec-11-5"><span class="section-number-3">11.5</span> 複数人で共著</h3>
+<h3 id="sec-11-5"><span class="section-number-3">11.5</span> リモートリポジトリへの push/pull</h3>
 <div class="outline-text-3" id="text-11-5">
+
+</div>
+
+</div>
+
+<div id="outline-container-11-6" class="outline-3">
+<h3 id="sec-11-6"><span class="section-number-3">11.6</span> 複数人で共著</h3>
+<div class="outline-text-3" id="text-11-6">
 
 </div>
 </div>
@@ -1255,7 +1338,7 @@ Initialized empty Git repository<span style="color: #00ffff;"> in</span> /Users/
 <div id="postamble">
 <p class="date">&#26085;&#20184;: 2013-02-21 Thu</p>
 <p class="author">&#33879;&#32773;: Takeshi Nagae</p>
-<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.2 with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3e with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
 
 </div>
